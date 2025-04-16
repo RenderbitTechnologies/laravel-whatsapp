@@ -1,0 +1,39 @@
+{
+    "name": "renderbit/laravel-whatsapp",
+    "version": "1.0.0",
+    "description": "Framework-agnostic PHP library for sending WhatsApp messages via Renderbit, with Laravel support.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["whatsapp", "laravel", "renderbit", "api", "messaging"],
+    "homepage": "https://github.com/renderbit/laravel-whatsapp",
+    "support": {
+        "issues": "https://github.com/RenderbitTechnologies/laravel-whatsapp/issues",
+        "source": "https://github.com/RenderbitTechnologies/laravel-whatsapp"
+    },
+    "authors": [
+        {
+            "name": "Aditya V Jajodia",
+            "email": "aditya.v.jajodia@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "guzzlehttp/guzzle": "^7.9",
+        "psr/log": "^1.1 || ^2.0 || ^3.0",
+        "psr/simple-cache": "^1.0 || ^2.0 || ^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Renderbit\\LaravelWhatsapp\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Renderbit\\LaravelWhatsapp\\WhatsappServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
