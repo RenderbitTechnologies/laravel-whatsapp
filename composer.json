@@ -1,6 +1,6 @@
 {
     "name": "renderbit/laravel-whatsapp",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Framework-agnostic PHP library for sending WhatsApp messages via Renderbit, with Laravel support.",
     "type": "library",
     "license": "MIT",
