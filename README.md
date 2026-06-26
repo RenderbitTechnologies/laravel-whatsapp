@@ -21,8 +21,6 @@ A **framework-agnostic**, Laravel-ready PHP package for sending template-based W
 - 🧪 **100% test coverage** — PHPUnit test suite with CI on 6 matrix configurations
 - 🔌 **Laravel auto-discovery** — service provider auto-registers, facade ready to use
 
----
-
 ## 📦 Installation
 
 ```bash
@@ -39,8 +37,6 @@ composer require renderbit/laravel-whatsapp
 | illuminate/support | ^10.0 \| ^11.0 |
 | psr/log | ^1.1 \| ^2.0 \| ^3.0 |
 | psr/simple-cache | ^1.0 \| ^2.0 \| ^3.0 |
-
----
 
 ## ⚙️ Laravel Setup
 
@@ -77,8 +73,6 @@ WHATSAPP_OLD_TOKEN=previous-token-if-refreshing
 | `whatsapp_business_number` | `WHATSAPP_BUSINESS_NUMBER` | Business phone number (sender) |
 | `whatsapp_username` | `WHATSAPP_USERNAME` | Username for the API |
 | `old_token` | `WHATSAPP_OLD_TOKEN` | Previous token (used during token refresh) |
-
----
 
 ## 🧱 Usage
 
@@ -163,8 +157,6 @@ $client = new WhatsappClient([
 $response = $client->sendMessage('919876543210', '1043144443', ['Alice', '3000']);
 ```
 
----
-
 ## 🔐 Token Management
 
 The `TokenManager` class handles all authentication token lifecycle automatically.
@@ -185,8 +177,6 @@ The `TokenManager` class handles all authentication token lifecycle automaticall
 
 You can swap the cache backend to Redis, APCu, database, or any PSR-16 implementation.
 
----
-
 ## 📡 DLR Webhook
 
 The package registers a POST route for delivery reports:
@@ -202,8 +192,6 @@ To customize, extend the controller or disable the routes and define your own:
 ```php
 // Don't publish routes — override in your app's RouteServiceProvider
 ```
-
----
 
 ## 🗺 Error Code Reference
 
@@ -226,8 +214,6 @@ The package ships with **51 mapped error codes** in `Renderbit\LaravelWhatsapp\C
 | 38679–65536 | Campaign and system errors |
 
 You can customize messages by extending or modifying the `ErrorCodes::MAP` array.
-
----
 
 ## 🧪 Testing
 
@@ -256,8 +242,6 @@ The package is tested via GitHub Actions across 6 configurations:
 | 8.3 | 10 |
 | 8.3 | 11 |
 | 8.4 | 11 |
-
----
 
 ## 📁 Project Structure
 
@@ -294,8 +278,6 @@ renderbit/laravel-whatsapp
 └── README.md
 ```
 
----
-
 ## 🧩 Extending & Customization
 
 - **Error messages** — Modify `src/Constants/ErrorCodes.php` to localize or customize API error messages
@@ -303,8 +285,6 @@ renderbit/laravel-whatsapp
 - **Logger** — The PSR-3 `LoggerInterface` supports Monolog, Loggly, Laravel's Log facade, etc.
 - **DLR handling** — Extend `WhatsAppDLRController` to implement custom delivery report logic (store in DB, forward to webhook, etc.)
 - **HTTP client** — `GuzzleHttp\Client` is used internally; customize timeouts/headers in `WhatsappClient::__construct()`
-
----
 
 ## 🤝 Contributing
 
