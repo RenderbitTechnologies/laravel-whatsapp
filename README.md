@@ -8,8 +8,6 @@
 
 A **framework-agnostic**, Laravel-ready PHP package for sending template-based WhatsApp messages via the Renderbit WhatsApp API.
 
----
-
 ## 🚀 Features
 
 - ✅ **Works with Laravel 10/11, Symfony, Slim, or any PHP 8.1+ app**
@@ -294,8 +292,6 @@ renderbit/laravel-whatsapp
 4. Submit a pull request
 
 Please ensure all tests pass and maintain at least the current coverage level.
-
----
 
 ## 📄 License
 
