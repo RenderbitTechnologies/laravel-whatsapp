@@ -1,6 +1,7 @@
 # Laravel WhatsApp (renderbit/laravel-whatsapp)
 
 [![Tests](https://github.com/RenderbitTechnologies/laravel-whatsapp/actions/workflows/tests.yml/badge.svg)](https://github.com/RenderbitTechnologies/laravel-whatsapp/actions/workflows/tests.yml)
+[![Packagist Version](https://img.shields.io/packagist/v/renderbit/laravel-whatsapp?logo=packagist)](https://packagist.org/packages/renderbit/laravel-whatsapp)
 ![PHP](https://img.shields.io/badge/PHP-%3E%3D8.1-777BB4?logo=php)
 ![Laravel](https://img.shields.io/badge/Laravel-10%20%7C%2011-FF2D20?logo=laravel)
 
