@@ -1,0 +1,64 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for laravel-whatsapp
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! Please describe what you'd like to see.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A one-line description of the feature.
+      placeholder: "Add support for interactive message buttons..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this feature needed? What problem does it solve or what use case does it enable?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: How should this feature work? Include API examples if possible.
+      placeholder: |
+        ```php
+        // Example usage
+        $client->sendInteractiveMessage($phone, $buttonConfig);
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: What must be true for this feature to be considered complete?
+      placeholder: |
+        - [ ] Feature works with Laravel 10/11
+        - [ ] Feature works without Laravel (standalone)
+        - [ ] Unit tests added
+        - [ ] Documentation updated
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered other approaches? Why were they rejected?
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Mockups, links to WhatsApp API docs, or related issues.

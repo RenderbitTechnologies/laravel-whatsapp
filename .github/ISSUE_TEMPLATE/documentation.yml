@@ -1,0 +1,42 @@
+name: Documentation Issue
+description: Report missing or incorrect documentation
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us improve the documentation. What's wrong or missing?
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Missing documentation
+        - Incorrect/outdated information
+        - Unclear explanation
+        - Typo or formatting issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What documentation is affected and what needs to change?
+    validations:
+      required: true
+
+  - type: textarea
+    id: section
+    attributes:
+      label: Section / File
+      description: Where in the docs is the issue? (e.g., README "Installation" section, inline PHPDoc)
+      placeholder: "README.md → Laravel Setup → Publish Config"
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Fix
+      description: If you know the correct information, share it here.

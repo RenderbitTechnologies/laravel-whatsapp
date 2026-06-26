@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: WhatsApp API Documentation
+    url: https://developers.facebook.com/docs/whatsapp/api
+    about: Reference docs for the WhatsApp Business API
+  - name: Packagist Page
+    url: https://packagist.org/packages/renderbit/laravel-whatsapp
+    about: Installation and version info on Packagist

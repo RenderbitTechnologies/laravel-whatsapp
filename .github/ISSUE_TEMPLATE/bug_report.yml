@@ -1,0 +1,107 @@
+name: Bug Report
+description: Report a bug in laravel-whatsapp
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please fill out the details below to help us investigate and fix the issue.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the bug.
+      placeholder: Tell us what went wrong...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Install package via `composer require renderbit/laravel-whatsapp`
+        2. Configure with...
+        3. Call...
+        4. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened? Include any error messages or stack traces.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: framework
+    attributes:
+      label: Framework
+      description: Which framework are you using?
+      options:
+        - Laravel 11
+        - Laravel 10
+        - Symfony
+        - Slim
+        - Plain PHP (no framework)
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: php-version
+    attributes:
+      label: PHP Version
+      description: Which PHP version are you running?
+      options:
+        - "8.1"
+        - "8.2"
+        - "8.3"
+        - "8.4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: package-version
+    attributes:
+      label: Package Version
+      description: Which version of laravel-whatsapp are you using?
+      options:
+        - "1.1.0"
+        - "1.0.x"
+        - "Other (specify in description)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Relevant Configuration
+      description: Paste your `config/whatsapp.php` (redact API keys/tokens).
+      render: php
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Stack Trace
+      description: If applicable, include relevant log output or exception traces.
+      render: shell
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context — screenshots, related issues, etc.
