@@ -1,6 +1,6 @@
 <?php
 
-namespace Renderbit\LaravelWhatsApp\Http\Controllers;
+namespace Renderbit\LaravelWhatsapp\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;

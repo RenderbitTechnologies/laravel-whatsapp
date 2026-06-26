@@ -2,6 +2,7 @@
 
 namespace Renderbit\LaravelWhatsapp;
 
+use Carbon\Carbon;
 use GuzzleHttp\Client;
 use Psr\Log\LoggerInterface;
 use Psr\SimpleCache\CacheInterface;
@@ -77,7 +78,8 @@ class TokenManager
                     'expires_at' => $data['expiryDate'],
                 ];
 
-                $this->cache->set($this->cacheKey, $tokenData, $tokenData['expires_at']);
+                $ttl = max(0, (new Carbon($data['expiryDate']))->getTimestamp() - now()->getTimestamp());
+                $this->cache->set($this->cacheKey, $tokenData, $ttl);
                 return $data['token'];
             }
 

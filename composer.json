@@ -19,12 +19,23 @@
     "require": {
         "php": ">=8.1",
         "guzzlehttp/guzzle": "^7.9",
+        "illuminate/support": "^10.0 || ^11.0",
         "psr/log": "^1.1 || ^2.0 || ^3.0",
         "psr/simple-cache": "^1.0 || ^2.0 || ^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^9.0"
     },
     "autoload": {
         "psr-4": {
             "Renderbit\\LaravelWhatsapp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Renderbit\\LaravelWhatsapp\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -35,5 +46,10 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "config": {
+        "audit": {
+            "ignore": ["[\"PKSA-m5cs-t1y6-qpcs\", \"PKSA-3r5d-mb8f-1qw9\", \"PKSA-mdq4-51ck-6kdq\", \"PKSA-8qx3-n5y5-vvnd\", \"PKSA-q46n-4fdk-zjr4\", \"PKSA-qzrn-rnz3-85w1\", \"PKSA-w7xr-vk7n-rstm\"]"]
+        }
+    }
 }

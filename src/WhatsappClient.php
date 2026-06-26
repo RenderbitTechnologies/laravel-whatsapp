@@ -98,6 +98,11 @@ class WhatsappClient
 
             $this->logger->info('WhatsApp API Response: ', $response);
 
+            // Check if the request itself failed
+            if (isset($response['error'])) {
+                return ['success' => false, 'message' => $response['error']];
+            }
+
             // Check for API response structure
             $ack = $response['MESSAGEACK']['GUID'] ?? null;
             if (!$ack) {
