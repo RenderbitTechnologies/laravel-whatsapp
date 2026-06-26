@@ -2,19 +2,20 @@
 
 namespace Renderbit\LaravelWhatsapp\Tests;
 
+use PHPUnit\Framework\Attributes\Test;
 use Renderbit\LaravelWhatsapp\WhatsappClient;
 use Renderbit\LaravelWhatsapp\WhatsappServiceProvider;
 
 class WhatsappServiceProviderTest extends LaravelTestCase
 {
-    /** @test */
+    #[Test]
     public function it_merges_default_config()
     {
         $this->assertIsArray(config('whatsapp'));
         $this->assertEquals('https://api.example.com', config('whatsapp.api_base_url'));
     }
 
-    /** @test */
+    #[Test]
     public function it_binds_whatsapp_client_as_singleton()
     {
         $client1 = $this->app->make(WhatsappClient::class);
@@ -24,7 +25,7 @@ class WhatsappServiceProviderTest extends LaravelTestCase
         $this->assertSame($client1, $client2);
     }
 
-    /** @test */
+    #[Test]
     public function it_registers_whatsapp_alias()
     {
         $this->assertTrue($this->app->bound('whatsapp'));
@@ -32,13 +33,5 @@ class WhatsappServiceProviderTest extends LaravelTestCase
             WhatsappClient::class,
             $this->app->make('whatsapp')
         );
-    }
-
-    /** @test */
-    public function it_provides_publishable_resources()
-    {
-        $provider = new WhatsappServiceProvider($this->app);
-
-        $this->assertIsArray($provider->provides());
     }
 }

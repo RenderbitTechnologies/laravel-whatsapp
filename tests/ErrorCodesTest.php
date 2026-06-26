@@ -4,9 +4,11 @@ namespace Renderbit\LaravelWhatsapp\Tests;
 
 use Renderbit\LaravelWhatsapp\Constants\ErrorCodes;
 
+use PHPUnit\Framework\Attributes\Test;
+
 class ErrorCodesTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function it_returns_known_error_message()
     {
         $ref = new \ReflectionClass(ErrorCodes::class);
@@ -19,7 +21,7 @@ class ErrorCodesTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function it_has_all_expected_error_codes()
     {
         $map = ErrorCodes::MAP;
@@ -39,7 +41,7 @@ class ErrorCodesTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function it_returns_null_for_unknown_error_code()
     {
         $this->assertNull(ErrorCodes::MAP[99999] ?? null);

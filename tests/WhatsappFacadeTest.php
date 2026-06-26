@@ -2,11 +2,12 @@
 
 namespace Renderbit\LaravelWhatsapp\Tests;
 
+use PHPUnit\Framework\Attributes\Test;
 use Renderbit\LaravelWhatsapp\Facades\Whatsapp;
 
 class WhatsappFacadeTest extends LaravelTestCase
 {
-    /** @test */
+    #[Test]
     public function facade_accessor_is_whatsapp()
     {
         $reflection = new \ReflectionMethod(Whatsapp::class, 'getFacadeAccessor');
@@ -16,7 +17,7 @@ class WhatsappFacadeTest extends LaravelTestCase
         $this->assertEquals('whatsapp', $accessor);
     }
 
-    /** @test */
+    #[Test]
     public function facade_resolves_whatsapp_client()
     {
         $this->assertInstanceOf(
