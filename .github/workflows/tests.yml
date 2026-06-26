@@ -56,8 +56,8 @@ jobs:
       - name: Install Laravel ${{ matrix.laravel }} dependencies
         run: |
           composer require illuminate/support:${{ matrix.illuminate }} --no-update --no-interaction
-          composer require --dev orchestra/testbench:${{ matrix.testbench }} phpunit/${{ matrix.phpunit }} --no-update --no-interaction
-          composer update --prefer-dist --no-interaction
+          composer require --dev orchestra/testbench:${{ matrix.testbench }} phpunit/phpunit:${{ matrix.phpunit }} --no-update --no-interaction
+          COMPOSER_POLICY_ADVISORIES_BLOCK=false composer update --prefer-dist --no-interaction
 
       - name: Run tests
         run: vendor/bin/phpunit
