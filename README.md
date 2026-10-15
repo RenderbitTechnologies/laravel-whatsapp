@@ -4,7 +4,7 @@
 [![Packagist Version](https://img.shields.io/packagist/v/renderbit/laravel-whatsapp?logo=packagist)](https://packagist.org/packages/renderbit/laravel-whatsapp)
 [![License](https://img.shields.io/packagist/l/renderbit/laravel-whatsapp?logo=opensourceinitiative)](https://github.com/RenderbitTechnologies/laravel-whatsapp/blob/main/LICENSE)
 ![PHP](https://img.shields.io/badge/PHP-%3E%3D8.1-777BB4?logo=php)
-![Laravel](https://img.shields.io/badge/Laravel-10%20%7C%2011-FF2D20?logo=laravel)
+![Laravel](https://img.shields.io/badge/Laravel-10%20%7C%2011%20%7C%2012-FF2D20?logo=laravel)
 
 A **framework-agnostic**, Laravel-ready PHP package for sending template-based WhatsApp messages via the Renderbit WhatsApp API.
 
@@ -30,7 +30,7 @@ composer require renderbit/laravel-whatsapp
 | Dependency | Version |
 |---|---|
 | PHP | >= 8.1 |
-| Laravel (optional) | 10.x \| 11.x |
+| Laravel (optional) | 10.x \| 11.x \| 12.x |
 | guzzlehttp/guzzle | ^7.9 |
 | illuminate/support | ^10.0 \| ^11.0 \| ^12.0 |
 | psr/log | ^1.1 \| ^2.0 \| ^3.0 |
@@ -230,16 +230,19 @@ The test suite covers:
 
 ### CI Matrix
 
-The package is tested via GitHub Actions across 6 configurations:
+The package is tested via GitHub Actions across 9 configurations:
 
 | PHP | Laravel |
 |---|---|
 | 8.1 | 10 |
 | 8.2 | 10 |
 | 8.2 | 11 |
+| 8.2 | 12 |
 | 8.3 | 10 |
 | 8.3 | 11 |
+| 8.3 | 12 |
 | 8.4 | 11 |
+| 8.4 | 12 |
 
 ## 📁 Project Structure
 
