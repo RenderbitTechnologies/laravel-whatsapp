@@ -10,7 +10,7 @@ A **framework-agnostic**, Laravel-ready PHP package for sending template-based W
 
 ## 🚀 Features
 
-- ✅ **Works with Laravel 10/11, Symfony, Slim, or any PHP 8.1+ app**
+- ✅ **Works with Laravel 10/11/12, Symfony, Slim, or any PHP 8.1+ app**
 - 🔐 **PSR-16 token caching** — automatic token generation, caching, and refresh with configurable TTL
 - 📄 **Template-based messaging** — pass template IDs with dynamic parameters
 - 🧠 **51 built-in error codes** — maps API error codes to human-readable messages
@@ -32,7 +32,7 @@ composer require renderbit/laravel-whatsapp
 | PHP | >= 8.1 |
 | Laravel (optional) | 10.x \| 11.x |
 | guzzlehttp/guzzle | ^7.9 |
-| illuminate/support | ^10.0 \| ^11.0 |
+| illuminate/support | ^10.0 \| ^11.0 \| ^12.0 |
 | psr/log | ^1.1 \| ^2.0 \| ^3.0 |
 | psr/simple-cache | ^1.0 \| ^2.0 \| ^3.0 |
 
